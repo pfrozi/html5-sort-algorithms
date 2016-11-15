@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.text-danger{
+    margin-left:5px;
+}
+
+.menu-item{
+    text-align: center;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 16px;
+    color: #00B7FF;
+}
+.menu-item.off{
+    background-color: #FFAAAA;
+
+}
+
+.bootstrap-tagsinput {
+    width: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}

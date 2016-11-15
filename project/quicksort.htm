@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <!-- <meta http-equiv="refresh" content="10;URL='bubblesort.htm'" /> -->
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/docs.min.css" />
+        <link rel="stylesheet" href="css/box-with-shadows.css" />
+        <link rel="stylesheet" href="css/sticky-footer.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <script src="js/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+
+        <script src="js/core.js"></script>
+
+        <link rel="shortcut icon" href="media/images/sorting-icon.png">
+
+        <title>Trabalho de Hiperdocumentos - Algoritmos de Ordenação</title>
+    </head>
+
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+
+            <div class="container">
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.htm">
+                        <img src="media/images/sorting-icon.png" width="28px" height="28px" />
+                    </a>
+                    <a class="navbar-brand" href="index.htm">
+                        Algoritmos de Ordenação -
+                    </a>
+                </div>
+
+                <div class="navbar-collapse collapse ">
+
+                    <ul class="nav navbar-nav">
+                        <li class="menu-item">
+                            <a href='bubblesort.htm'>BubbleSort</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href='shellsort.htm'>ShellSort</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href='mergesort.htm'>MergeSort</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href='selectionsort.htm'>SelectionSort</a>
+                        </li>
+                        <li class="menu-item active">
+                            <a href='quicksort.htm'>QuickSort</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="menu-item bg-success roteiro-play">
+                            <a href='#' title="Reiniciar Roteiro Indexado" data-toggle="tooltip">Start</a>
+                        </li>
+                        <li class="menu-item off roteiro-stop">
+                            <a href='#' title="Parar Roteiro Indexado" data-toggle="tooltip">Stop</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+        <footer class="footer">
+            <div class="container text-left">
+                <p class="text muted credit small">
+                    Trabalho de Hiperdocumentos - Algoritmos de Ordenação - Pedro Frozi e Luiz Souza
+                </p>
+            </div>
+        </footer>
+
+        <!-- CONTEUDO DA PAGINA -->
+        <div class="container">
+
+            <h1>Quick Sort</h1>
+
+            <!-- Tabela com as características principais do algoritmo -->
+            <table class="table table-bordered">
+                <caption>
+                    Características
+                </caption>
+                <thead>
+                    <tr>
+                        <th>
+                            Algoritmo
+                        </th>
+                        <th>
+                            Pior Caso
+                        </th>
+                        <th>
+                            Melhor Caso
+                        </th>
+                        <th>
+                            Família
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Quick Sort
+                        </td>
+                        <td>
+                            O(n^2)
+                        </td>
+                        <td>
+                            O(n log2 n)
+                        </td>
+                        <td>
+                            Classificação por Inserção
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+        <!-- gif animado centralizado que explica o algol -->
+        <div class="container-fluid">
+            <div class="row">
+              <img src="media/images/gifs/quick-sort4.gif" class="img-responsive center-block" alt="Responsive image" />
+            </div>
+
+            <!-- Div "Um pouco de teoria" -->
+            <div>
+                <h2>Um Pouco de Teoria</h2>
+                <p class="text-justify">
+                    <!-- https://pt.wikipedia.org/wiki/Shell_sort -->
+                    xxxxx
+
+                </p>
+                <p class="text-justify">
+                    <!-- Link: https://cadernogeek.wordpress.com/tag/shell-sort/ -->
+                    yyyy
+                </p>
+            </div>
+
+            <!-- Div "Ver também..." -->
+            <div>
+                <h3><em>Veja também...</em></h3>
+                <div class="bs-glyphicons center-block">
+                    <ul class="bs-glyphicons-list">
+                        <li class="btn-outras-midias-quick">
+                            <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+                            <span class="glyphicon-class">Outras Mídias</span>
+                        </li>
+                        <li class="btn-exemplos-quick">
+                            <span class="glyphicon glyphicon-console" aria-hidden="true"></span>
+                            <span class="glyphicon-class">Exemplos</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>  <!-- Div "Ver também..." -->
+            <hr />
+            <div>
+                <h4>Referências</h4>
+                <ol>
+                  <li>
+                      https://pt.wikipedia.org/wiki/Shell_sort
+                  </li>
+                  <li>
+                      https://en.wikipedia.org/wiki/Shellsort
+                  </li>
+                  <li>
+                      http://www.programming-algorithms.net/article/41653/Shell-sort
+                  </li>
+                  <li>
+                      http://www.sorting-algorithms.com/
+                  </li>
+                  <li>
+                      http://www.rafaeltoledo.net/algoritmos-de-ordenacao-4-shell-sort/
+                  </li>
+                  <li>
+                      https://cadernogeek.wordpress.com/tag/shell-sort/
+                  </li>
+                </ol>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

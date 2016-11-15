@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <!-- <meta http-equiv="refresh" content="10;URL='bubblesort.htm'" /> -->
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/docs.min.css" />
+        <link rel="stylesheet" href="css/box-with-shadows.css" />
+        <link rel="stylesheet" href="css/sticky-footer.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <link rel="stylesheet" href="css/wiki-codes.css" />
+
+        <script src="js/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+
+        <script src="js/core.js"></script>
+
+        <link rel="shortcut icon" href="media/images/sorting-icon.png">
+
+        <title>Trabalho de Hiperdocumentos - Algoritmos de Ordenação</title>
+    </head>
+
+    <body next="selectionsort.htm">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+
+            <div class="container">
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.htm">
+                        <img src="media/images/sorting-icon.png" width="28px" height="28px" />
+                    </a>
+                    <a class="navbar-brand" href="index.htm">
+                        Algoritmos de Ordenação -
+                    </a>
+                </div>
+
+                <div class="navbar-collapse collapse ">
+
+                    <ul class="nav navbar-nav">
+                        <li class="menu-item">
+                            <a href='bubblesort.htm'>BubbleSort</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href='shellsort.htm'>ShellSort</a>
+                        </li>
+                        <li class="menu-item active">
+                            <a href='mergesort.htm'>MergeSort</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href='selectionsort.htm'>SelectionSort</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href='quicksort.htm'>QuickSort</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="menu-item bg-success roteiro-play">
+                            <a href='#' title="Reiniciar Roteiro Indexado" data-toggle="tooltip">Start</a>
+                        </li>
+                        <li class="menu-item off roteiro-stop">
+                            <a href='#' title="Parar Roteiro Indexado" data-toggle="tooltip">Stop</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+        <footer class="footer">
+            <div class="container text-left">
+                <p class="text muted credit small">
+                    Trabalho de Hiperdocumentos - Algoritmos de Ordenação - Pedro Frozi e Luiz Souza
+                </p>
+            </div>
+        </footer>
+
+        <!-- CONTEUDO DA PAGINA -->
+        <div class="container">
+
+            <h1>Merge Sort</h1>
+
+            <!-- Tabela com as características principais do algoritmo -->
+            <table class="table table-bordered">
+                <caption>
+                    Características
+                </caption>
+                <thead>
+                    <tr>
+                        <th>
+                            Algoritmo
+                        </th>
+                        <th>
+                            Pior Caso
+                        </th>
+                        <th>
+                            Melhor Caso
+                        </th>
+                        <th>
+                            Família
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Merge Sort
+                        </td>
+                        <td>
+                            O(n Log 2n)
+                        </td>
+                        <td>
+                            O(n Log n)
+                        </td>
+                        <td>
+                            Classificação por Intercalação
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+        <!-- gif animado centralizado que explica o algol -->
+        <div class="container-fluid">
+
+            <div class="row">
+                <!-- Div "tabs" -->
+                <div class="col-md-8">
+                    <ul class="nav nav-tabs">
+                      <li role="presentation" class="active pointer">
+                          <a class="code-active1">JAVA</a>
+                      </li>
+                      <li role="presentation" class="pointer">
+                          <a class="code-active2">C++</a>
+                      </li>
+                    </ul>
+                    <hr />
+                    <div class="code-actived1">
+                        <div class="mw-highlight mw-content-ltr" dir="ltr">
+                            <pre>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mergeSort</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="o">,</span> <span class="kt">int</span> <span class="n">inicio</span><span class="o">,</span> <span class="kt">int</span> <span class="n">fim</span><span class="o">)</span> <span class="o">{</span>
+    	<span class="k">if</span> <span class="o">(</span><span class="n">fim</span> <span class="o">&lt;=</span> <span class="n">inicio</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="k">return</span><span class="o">;</span>
+    	<span class="o">}</span>
+    	<span class="kt">int</span> <span class="n">meio</span> <span class="o">=</span> <span class="o">(</span><span class="n">inicio</span> <span class="o">+</span> <span class="n">fim</span><span class="o">)</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
+    	<span class="n">mergeSort</span><span class="o">(</span><span class="n">array</span><span class="o">,</span> <span class="n">inicio</span><span class="o">,</span> <span class="n">meio</span><span class="o">);</span>
+    	<span class="n">mergeSort</span><span class="o">(</span><span class="n">array</span><span class="o">,</span> <span class="n">meio</span> <span class="o">+</span> <span class="mi">1</span><span class="o">,</span> <span class="n">fim</span><span class="o">);</span>
+    	<span class="kt">int</span><span class="o">[]</span> <span class="n">A</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">meio</span> <span class="o">-</span> <span class="n">inicio</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+    	<span class="kt">int</span><span class="o">[]</span> <span class="n">B</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">fim</span> <span class="o">-</span> <span class="n">meio</span><span class="o">];</span>
+    	<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">meio</span> <span class="o">-</span> <span class="n">inicio</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    		<span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">array</span><span class="o">[</span><span class="n">inicio</span> <span class="o">+</span> <span class="n">i</span><span class="o">];</span>
+    	<span class="o">}</span>
+    	<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">fim</span> <span class="o">-</span> <span class="n">meio</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    		<span class="n">B</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">array</span><span class="o">[</span><span class="n">meio</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">i</span><span class="o">];</span>
+    	<span class="o">}</span>
+    	<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    	<span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    	<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">inicio</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">fim</span><span class="o">;</span> <span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+    		<span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">A</span><span class="o">.</span><span class="na">length</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">B</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="o">{</span>
+    			<span class="k">if</span> <span class="o">(</span><span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">B</span><span class="o">[</span><span class="n">j</span><span class="o">])</span> <span class="o">{</span>
+    				<span class="n">array</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">++];</span>
+    			<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    				<span class="n">array</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">B</span><span class="o">[</span><span class="n">j</span><span class="o">++];</span>
+    			<span class="o">}</span>
+    		<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">A</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="o">{</span>
+    			<span class="n">array</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">++];</span>
+    		<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">B</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="o">{</span>
+    			<span class="n">array</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">B</span><span class="o">[</span><span class="n">j</span><span class="o">++];</span>
+    		<span class="o">}</span>
+    	<span class="o">}</span>
+    <span class="o">}</span>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="code-actived2">
+                        <div class="mw-highlight mw-content-ltr" dir="ltr">
+                            <pre>
+    <span class="cp">#include &lt;algorithm&gt;</span>
+    <span class="cp">#include &lt;iostream&gt;</span>
+    <span class="cp">#include &lt;vector&gt;</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">merge_sort</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span>
+    <span class="p">{</span>
+    	<span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    		<span class="k">return</span> <span class="n">data</span><span class="p">;</span>
+    	<span class="p">}</span>
+
+    	<span class="kt">int</span> <span class="n">middle</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+    	<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">left</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">data</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">+</span><span class="n">middle</span><span class="p">);</span>
+    	<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">right</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">+</span><span class="n">middle</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+    	<span class="n">left</span> <span class="o">=</span> <span class="n">merge_sort</span><span class="p">(</span><span class="n">left</span><span class="p">);</span>
+    	<span class="n">right</span> <span class="o">=</span> <span class="n">merge_sort</span><span class="p">(</span><span class="n">right</span><span class="p">);</span>
+
+    	<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+    	<span class="n">std</span><span class="o">::</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">left</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
+    	           <span class="n">right</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">right</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
+    	           <span class="n">result</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span>
+
+    	<span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+                            </pre>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+                 <!-- Div "tabs" -->
+
+
+                <!-- Div "gifs" -->
+                <div class="col-md-4">
+                    <h2>MergeSort - Animações</h2>
+                    <br />
+                    <br />
+                    <blockquote>
+                        <em>MergeSort Simples</em>
+                        <small><em>
+                            No exemplo abaixo, o algoritmo é executado para n = 8.
+                        </em></small>
+                        <img src="media/images/gifs/merge-sort2.gif" class="img-responsive center-block" alt="Responsive image" />
+                    </blockquote>
+
+                    <blockquote>
+                        <em>MergeSort no Plano Cartesiano</em>
+                        <small><em>
+                            Neste exemplo, sua posição na horizontal representa o
+                            índice do array, e a altura do bloco representa o
+                            valor do elemento.
+                        </em></small>
+                        <img src="media/images/gifs/merge-sort3.gif" class="img-responsive center-block" alt="Responsive image" />
+                    </blockquote>
+
+
+                </div> <!-- Div "gifs" -->
+            </div>
+
+
+            <!-- Div "Ver tambem..." -->
+            <div>
+                <h3><em>Veja também...</em></h3>
+                <div class="bs-glyphicons center-block">
+                    <ul class="bs-glyphicons-list">
+                        <li class="btn-teoria-merge">
+                            <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                            <span class="glyphicon-class">Um Pouco de Teoria</span>
+                        </li>
+                        <li class="btn-outras-midias-merge">
+                            <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+                            <span class="glyphicon-class">Outras Mídias</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>  <!-- Div "Ver Tambem" -->
+            <hr />
+            <div>
+                <h4>Referências</h4>
+                <ol>
+                  <li>
+                      https://pt.wikipedia.org/wiki/Merge_sort
+                  </li>
+                  <li>
+                      http://www.ime.usp.br/~pf/algoritmos/aulas/mrgsrt.html
+                  </li>
+                  <li>
+                      http://geeksquiz.com/merge-sort/
+                  </li>
+                  <li>
+                      http://www.sorting-algorithms.com/
+                  </li>
+                  <li>
+                      https://pt.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort
+                  </li>
+                </ol>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
